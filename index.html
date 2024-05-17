@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="nav">
+        <div class="logo">
+            <h1>Superstore</h1>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul>
+            <li><a href="#hero-section">Home</a></li>
+            <li><a href="dashboard.html" target="_blank">Dashboard</a></li>
+            <li><a href="#our-team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+
+    <!-- hero -->
+    <header class="container" id="hero-section">
+        <div class="hero">
+            <section class="hero-left">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, nesciunt? Suscipit ad molestiae,
+                    laboriosam adipisci blanditiis unde architecto expedita consequuntur.
+                </p>
+                <a href="#">Lorem, ipsum.</a>
+            </section>
+
+            <section class="right">
+                <img src="gambar/illustration.svg" alt="Hero illustration" />
+            </section>
+        </div>
+    </header>
+    <!-- hero -->
+    <!-- Filter section -->
+    <section class="filter-section-container" id="dashboard">
+        <div class="chart-title">
+            <h1 class="chart-text">Chart</h1>
+        </div>
+        <div class="controls">
+            <label for="filterYear">Filter by Year:</label>
+            <select id="filterYear">
+                <option value="All">All</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+            </select>
+            <button onclick="applyFilter('yearChart', 'filterYear')">Apply</button>
+        </div>
+    </section>
+    <!-- End Filter section -->
+
+    <!-- chart -->
+    <div class="content">
+        <div class="card c1">
+            <h3>Profit by Year</h3>
+            <canvas id="yearChart" width="200" height="150"></canvas>
+        </div>
+        <div class="card c2">
+            <h3>Profit by Segment</h3>
+            <canvas id="segmentChart" width="200" height="150"></canvas>
+        </div>
+        <div class="card c3">
+            <h3>Profit by Ship Mode</h3>
+            <canvas id="shipModeChart" width="200" height="150"></canvas>
+        </div>
+        <div class="card c4">
+            <h3>Top 5 Profit by City</h3>
+            <canvas id="cityChart" width="200" height="150"></canvas>
+        </div>
+        <div class="card c5">
+            <h3>Profit by Category</h3>
+            <canvas id="categoryChart" width="200" height="150"></canvas>
+        </div>
+        <div class="card c6">
+            <h3>Top Products</h3>
+            <div id="topProductsTable" class="scrollable-table"></div>
+        </div>
+    </div>
+    <!-- chart -->
+
+    <!-- Our Team -->
+    <!-- <section class="our-team" id="our-team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <h3>Jovi Cahyono</h3>
+                    <p>Project Leader</p>
+                </div>
+                <div class="team-member">
+                    <h3>Fahri</h3>
+                    <p>Front End Engineer</p>
+                </div>
+                <div class="team-member">
+                    <h3>Helmelya</h3>
+                    <p>Front End Engineer</p>
+                </div>
+                <div class="team-member">
+                    <h3>Annisa</h3>
+                    <p>Front End Engineer</p>
+                </div>
+                <div class="team-member">
+                    <h3>Pina</h3>
+                    <p>Front End Engineer</p>
+                </div>
+                <div class="team-member">
+                    <h3>Nila</h3>
+                    <p>Deployment</p>
+                </div>
+                <div class="team-member">
+                    <h3>Ummah</h3>
+                    <p>Pitch Deck</p>
+                </div>
+                <div class="team-member">
+                    <h3>Nadhirah</h3>
+                    <p>Pitch Deck</p>
+                </div>
+                <div class="team-member">
+                    <h3>Stella</h3>
+                    <p>Pitch Deck</p>
+                </div>
+                <div class="team-member">
+                    <h3>Oryza</h3>
+                    <p>Quality Assurance</p>
+                </div>
+                <div class="team-member">
+                    <h3>Hilmy</h3>
+                    <p>Quality Assurance</p>
+                </div>
+                <div class="team-member">
+                    <h3>Dita</h3>
+                    <p>Quality Assurance</p>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+    <!-- Our Team -->
+
+    <!-- <section id="dashboards">
+        <iframe
+            src="https://lookerstudio.google.com/embed/reporting/c7bef115-bb28-41db-a55f-166bfbc2bb45/page/6JeuD"
+            frameborder="0" style="border:0" allowfullscreen></iframe>
+        <br />
+        <button class="click-button"
+            onclick="window.open('https://lookerstudio.google.com/reporting/c7bef115-bb28-41db-a55f-166bfbc2bb45', '_blank')">
+            To the site
+        </button>
+    </section> -->
+
+    <div class="cover" id="our-team">
+        <h2 class="team-heading" >Our Team</h2>
+        <ul class="cover2">
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Jovi Cahyono</h2>
+                <span>Project Leader</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="gambar/fahri.jpg" alt="" draggable="false">
+                </div>
+                <h2>Fahri Setia Darma</h2>
+                <span>Front-end Engineer</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Helmelya Putri Jelita</h2>
+                <span>Front-end Engineer</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Annisa Ramadhani</h2>
+                <span>Front-end Engineer</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Pina Muslimah Awaliyah</h2>
+                <span>Front-end Engineer</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Nila Mas'Adah</h2>
+                <span>Deployment Team</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Miftachul Ummah</h2>
+                <span>Pitch Deck Team</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Nadhirah Hafizha</h2>
+                <span>Pitch Deck Team</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Stella Rera' Pao' T.</h2>
+                <span>Pitch Deck Team</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Oryza Sativa</h2>
+                <span>Quality Assurance</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Hilmy Muhammad Faiz</h2>
+                <span>Quality Assurance</span>
+            </li>
+            <li class="card">
+                <div class="foto">
+                    <img src="" alt="" draggable="false">
+                </div>
+                <h2>Dita Amelia</h2>
+                <span>Quality Assurance</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <!-- contact -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <h2>Superstore</h2>
+            </div>
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/tim.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Dashboard Section */
+#dashboards {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+iframe {
+  width: 900px;
+  height: 100%;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.click-button {
+  margin-top: 3px;
+  margin-bottom: 50px;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.click-button:active {
+  box-shadow: 0 2px #0056b3;
+  transform: translateY(3px);
+}
+.click-button:hover {
+  background-color: #0056b3;
+}
+
+/* navbar section start */
+nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px auto;
+  transition: 0.4s;
+}
+/* navbar section start */
+
+/* hero section start */
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.hero {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.hero section {
+  flex: 1;
+}
+.hero-left h1 {
+  margin-left: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #070439;
+}
+
+.hero-left p {
+  margin-left: 30px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: #444444;
+}
+
+.hero-left {
+  padding-right: 40px;
+}
+.hero-left a {
+  margin-left: 30px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.3s all ease;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.hero-left a:hover {
+  background-color: #0056b3;
+}
+.right {
+  padding-top: 50px;
+}
+
+.right img {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* hero section end */
+
+/* chart section start */
+.content {
+  background-color: #fff;
+  margin-top: 60px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  grid-template-areas:
+    "c1 c2 c3"
+    "c4 c5 c6";
+}
+
+.card {
+  background-color: rgb(246, 241, 241);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}
+
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.c4 {
+  grid-area: c4;
+}
+
+.c5 {
+  grid-area: c5;
+}
+
+.c6 {
+  grid-area: c6;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style untuk baris ganjil pada body tabel */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Style untuk baris genap pada body tabel */
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.scrollable-table {
+  overflow-y: scroll;
+  height: 300px;
+}
+
+.chart-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart-text {
+  font-size: 32px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* chart section end */
+
+/* team section start */
+.our-team {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.our-team h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-member {
+  margin: 0 15px;
+  max-width: 200px;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+/* team section end */
+
+/* contact section start */
+.contact {
+  padding: 80px 0;
+  text-align: center;
+  margin-top: -120px;
+}
+
+.contact h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* contact section end */
+
+/* footer section start */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  flex: 1;
+}
+
+.footer-menu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-social ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.footer-social ul li:first-child {
+  margin-left: 0;
+}
+
+.footer-social ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+/* footer section end */
+
+/* Responsive layout */
+@media screen and (max-width: 1000px) {
+  nav img {
+    width: 100px;
+  }
+
+  nav li {
+    list-style: none;
+    margin: 0 8px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .right {
+    order: -1;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+  .hero {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .content {
+    order: 2;
+  }
+
+  .hero .content h1 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero .content h1 br {
+    display: none;
+  }
+
+  .hero .content p {
+    padding-bottom: 5rem;
+  }
+
+  .hero .content p br {
+    display: none;
+  }
+
+  .hero img {
+    margin-top: 5rem;
+    order: 1;
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6";
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-menu {
+    margin-bottom: 20px;
+  }
+  .team-member {
+    margin: 15px;
+    max-width: 150px;
+    flex-basis: 50%;
+  }
+  .contact {
+    margin-top: -300px;
+  }
+  .cover2 .card {
+    margin-bottom: 200px; /* Menambahkan margin bawah */
+  }
+}
+
+.cover {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.team-heading {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  font-size: 32px;
+}
+
+.cover .cover2 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
+.cover2::-webkit-scrollbar {
+  display: none;
+}
+
+.cover2.no-transition {
+  scroll-behavior: auto;
+}
+
+.cover2.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.cover2.dragging .card {
+  cursor: grab;
+}
+
+.cover2 :where(.card, .foto) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover2 .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.cover2 .card .foto {
+  background: #004895;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+
+.cover .foto img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.cover2 .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  text-align: center;
+}
+
+.cover2 .card span {
+  color: #6a6d78;
+  font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .cover .cover2 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    justify-content: center; /* Tambahkan baris ini */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cover .cover2 {
+    grid-auto-columns: calc((115% / 1));
+  }
+}
