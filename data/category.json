@@ -1,0 +1,16 @@
+{
+  "datasets": [
+    {
+      "labels": ["Furniture"],
+      "data": [3529, 4834, 5803, 5414]
+    },
+    {
+      "labels": ["Office Supplies"],
+      "data": [13260, 14392, 17886, 22027]
+    },
+    {
+      "labels": ["Technology"],
+      "data": [8164, 8134, 7971, 11990]
+    }
+  ]
+}

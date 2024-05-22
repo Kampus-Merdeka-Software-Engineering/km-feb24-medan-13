@@ -1,0 +1,400 @@
+{
+  "topProductsData": [
+    {
+      "product": "Easy-staple paper",
+      "profit": 1096
+    },
+    {
+      "product": "Microsoft Sculpt Comfort Mouse",
+      "profit": 634
+    },
+    {
+      "product": "Staple envelope",
+      "profit": 630
+    },
+    {
+      "product": "Nortel Meridian M3904 Professional Digital phone",
+      "profit": 579
+    },
+    {
+      "product": "Xerox 1919",
+      "profit": 549
+    },
+    {
+      "product": "Logitech 910-002974 M325 Wireless Mouse for Web Scrolling",
+      "profit": 536
+    },
+    {
+      "product": "Logitech G19 Programmable Gaming Keyboard",
+      "profit": 528
+    },
+    {
+      "product": "Logitech G602 Wireless Gaming Mouse",
+      "profit": 515
+    },
+    {
+      "product": "Standard Rollaway File with Lock",
+      "profit": 465
+    },
+    {
+      "product": "Hunt PowerHouse Electric Pencil Sharpener, Blue",
+      "profit": 448
+    },
+    {
+      "product": "Pyle PMP37LED",
+      "profit": 447
+    },
+    {
+      "product": "Logitech Gaming G510s - Keyboard",
+      "profit": 432
+    },
+    {
+      "product": "Logitech Wireless Marathon Mouse M705",
+      "profit": 426
+    },
+    {
+      "product": "Maxell 4.7GB DVD-R",
+      "profit": 411
+    },
+    {
+      "product": "Imation Secure+ Hardware Encrypted USB 2.0 Flash Drive; 16GB",
+      "profit": 409
+    },
+    {
+      "product": "Adjustable Depth Letter/Legal Cart",
+      "profit": 406
+    },
+    {
+      "product": "Xerox 1888",
+      "profit": 406
+    },
+    {
+      "product": "Xerox 1988",
+      "profit": 404
+    },
+    {
+      "product": "Xerox 1909",
+      "profit": 401
+    },
+    {
+      "product": "Logitech Illuminated - Keyboard",
+      "profit": 401
+    },
+    {
+      "product": "Logitech G600 MMO Gaming Mouse",
+      "profit": 397
+    },
+    {
+      "product": "Global Airflow Leather Mesh Back Chair, Black",
+      "profit": 392.54
+    },
+    {
+      "product": "Xerox 1915",
+      "profit": 390.05
+    },
+    {
+      "product": "Logitech G700s Rechargeable Gaming Mouse",
+      "profit": 385.97
+    },
+    {
+      "product": "Logitech Wireless Performance Mouse MX for PC and Mac",
+      "profit": 383.96
+    },
+    {
+      "product": "Holmes Replacement Filter for HEPA Air Cleaner, Very Large Room, HEPA Filter",
+      "profit": 383.96
+    },
+    {
+      "product": "Green Bar Computer Printout Paper",
+      "profit": 380.87
+    },
+    {
+      "product": "SAFCO Arco Folding Chair",
+      "profit": 378.39
+    },
+    {
+      "product": "White Computer Printout Paper by Universal",
+      "profit": 376.74
+    },
+    {
+      "product": "Xerox 1913",
+      "profit": 375.04
+    },
+    {
+      "product": "Fellowes Staxonsteel Drawer Files",
+      "profit": 374.76
+    },
+    {
+      "product": "Cameo Buff Policy Envelopes",
+      "profit": 368.4
+    },
+    {
+      "product": "GBC Prestige Therm-A-Bind Covers",
+      "profit": 364.72
+    },
+    {
+      "product": "Eaton Premium Continuous-Feed Paper, 25% Cotton, Letter Size, White, 1000 Shts/Box",
+      "profit": 359.51
+    },
+    {
+      "product": "Xerox 1893",
+      "profit": 358.26
+    },
+    {
+      "product": "Cisco Unified IP Phone 7945G VoIP phone",
+      "profit": 358.05
+    },
+    {
+      "product": "Plantronics Audio 478 Stereo USB Headset",
+      "profit": 357.43
+    },
+    {
+      "product": "Xerox 191",
+      "profit": 354.23
+    },
+    {
+      "product": "Xerox 1883",
+      "profit": 354.01
+    },
+    {
+      "product": "Hon GuestStacker Chair",
+      "profit": 349.06
+    },
+    {
+      "product": "Xerox 1906",
+      "profit": 347.67
+    },
+    {
+      "product": "Digium D40 VoIP phone",
+      "profit": 346.96
+    },
+    {
+      "product": "Xerox 1916",
+      "profit": 342.57
+    },
+    {
+      "product": "Imation 16GB Mini TravelDrive USB 2.0 Flash Drive",
+      "profit": 342.56
+    },
+    {
+      "product": "Howard Miller 13\" Diameter Pewter Finish Round Wall Clock",
+      "profit": 340.52
+    },
+    {
+      "product": "Jabra SPEAK 410",
+      "profit": 338.36
+    },
+    {
+      "product": "Fellowes Mobile File Cart, Black",
+      "profit": 333.93
+    },
+    {
+      "product": "Geemarc AmpliPOWER60",
+      "profit": 331.28
+    },
+    {
+      "product": "Global Leather and Oak Executive Chair, Black",
+      "profit": 331.07
+    },
+    {
+      "product": "WD My Passport Ultra 2TB Portable External Hard Drive",
+      "profit": 328.44
+    },
+    {
+      "product": "Avery 4027 File Folder Labels for Dot Matrix Printers, 5000 Labels per Box, White",
+      "profit": 327.91
+    },
+    {
+      "product": "Wilson Electronics DB Pro Signal Booster",
+      "profit": 325.78
+    },
+    {
+      "product": "Xerox 1885",
+      "profit": 322.84
+    },
+    {
+      "product": "Fellowes Super Stor/Drawer Files",
+      "profit": 319.87
+    },
+    {
+      "product": "Deflect-o Glass Clear Studded Chair Mats",
+      "profit": 318.37
+    },
+    {
+      "product": "Ibico EB-19 Dual Function Manual Binding System",
+      "profit": 318.28
+    },
+    {
+      "product": "GE 48\" Fluorescent Tube, Cool White Energy Saver, 34 Watts, 30/Box",
+      "profit": 317.54
+    },
+    {
+      "product": "Xerox 1891",
+      "profit": 313.04
+    },
+    {
+      "product": "Razer Kraken PRO Over Ear PC and Music Headset",
+      "profit": 311.96
+    },
+    {
+      "product": "Advantus Employee of the Month Certificate Frame, 11 x 13-1/2",
+      "profit": 311.78
+    },
+    {
+      "product": "Boston Heavy-Duty Trimline Electric Pencil Sharpeners",
+      "profit": 310.88
+    },
+    {
+      "product": "Strathmore #10 Envelopes, Ultimate White",
+      "profit": 309.93
+    },
+    {
+      "product": "Hon Mobius Operator's Chair",
+      "profit": 309.93
+    },
+    {
+      "product": "Tennsco Snap-Together Open Shelving Units, Starter Sets and Add-On Units",
+      "profit": 307.44
+    },
+    {
+      "product": "Xerox 1945",
+      "profit": 304.16
+    },
+    {
+      "product": "Bush Andora Bookcase, Maple/Graphite Gray Finish",
+      "profit": 303.58
+    },
+    {
+      "product": "VTech DS6151",
+      "profit": 302.39
+    },
+    {
+      "product": "Innergie mMini Combo Duo USB Travel Charging Kit",
+      "profit": 302.33
+    },
+    {
+      "product": "Global Troy Executive Leather Low-Back Tilter",
+      "profit": 300.6
+    },
+    {
+      "product": "Avery 485",
+      "profit": 300.33
+    },
+    {
+      "product": "Cisco SPA 502G IP Phone",
+      "profit": 299.89
+    },
+    {
+      "product": "Blue String-Tie & Button Interoffice Envelopes, 10 x 13",
+      "profit": 299.86
+    },
+    {
+      "product": "Polycom VVX 310 VoIP phone",
+      "profit": 298.79
+    },
+    {
+      "product": "Belkin 5 Outlet SurgeMaster Power Centers",
+      "profit": 296.37
+    },
+    {
+      "product": "Office Star - Professional Matrix Back Chair with 2-to-1 Synchro Tilt and Mesh Fabric Seat",
+      "profit": 294.84
+    },
+    {
+      "product": "Howard Miller 13\" Diameter Goldtone Round Wall Clock",
+      "profit": 294.31
+    },
+    {
+      "product": "Staples",
+      "profit": 292.24
+    },
+    {
+      "product": "Eureka The Boss Lite 10-Amp Upright Vacuum, Blue",
+      "profit": 291.78
+    },
+    {
+      "product": "Xerox 1914",
+      "profit": 289.09
+    },
+    {
+      "product": "netTALK DUO VoIP Telephone Service",
+      "profit": 288.69
+    },
+    {
+      "product": "Dana Halogen Swing-Arm Architect Lamp",
+      "profit": 288.42
+    },
+    {
+      "product": "Logitech Trackman Marble Mouse",
+      "profit": 286.71
+    },
+    {
+      "product": "Hot File 7-Pocket, Floor Stand",
+      "profit": 285.55
+    },
+    {
+      "product": "Premium Transparent Presentation Covers by GBC",
+      "profit": 284.06
+    },
+    {
+      "product": "Airmail Envelopes",
+      "profit": 282.83
+    },
+    {
+      "product": "Memorex Mini Travel Drive 16 GB USB 2.0 Flash Drive",
+      "profit": 280.27
+    },
+    {
+      "product": "Xerox 1911",
+      "profit": 279.74
+    },
+    {
+      "product": "Xerox 1940",
+      "profit": 279.19
+    },
+    {
+      "product": "Xerox 1942",
+      "profit": 278.95
+    },
+    {
+      "product": "Trav-L-File Heavy-Duty Shuttle II, Black",
+      "profit": 278.85
+    },
+    {
+      "product": "Tyvek Interoffice Envelopes, 9 1/2\" x 12 1/2\", 100/Box",
+      "profit": 278.67
+    },
+    {
+      "product": "Dot Matrix Printer Tape Reel Labels, White, 5000/Box",
+      "profit": 278.21
+    },
+    {
+      "product": "Snap-A-Way Black Print Carbonless Ruled Speed Letter, Triplicate",
+      "profit": 275.44
+    },
+    {
+      "product": "Hypercom P1300 Pinpad",
+      "profit": 275.31
+    },
+    {
+      "product": "Belkin 8 Outlet Surge Protector",
+      "profit": 273.76
+    },
+    {
+      "product": "Xerox 1882",
+      "profit": 273.18
+    },
+    {
+      "product": "Hewlett Packard 310 Color Digital Copier",
+      "profit": 270
+    },
+    {
+      "product": "Brother DCP1000 Digital 3 in 1 Multifunction Machine",
+      "profit": 270
+    },
+    {
+      "product": "Office Star Flex Back Scooter Chair with Aluminum Finish Frame",
+      "profit": 268.36
+    }
+  ]
+}

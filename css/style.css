@@ -11,46 +11,6 @@ html {
   overflow-x: hidden;
 }
 
-/* Dashboard Section */
-#dashboards {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-iframe {
-  width: 900px;
-  height: 100%;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.click-button {
-  margin-top: 3px;
-  margin-bottom: 50px;
-  padding: 15px 30px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.click-button:active {
-  box-shadow: 0 2px #0056b3;
-  transform: translateY(3px);
-}
-.click-button:hover {
-  background-color: #0056b3;
-}
 
 /* navbar section start */
 nav {
