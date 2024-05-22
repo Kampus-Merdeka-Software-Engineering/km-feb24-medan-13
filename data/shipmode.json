@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "labels": ["First Class"],
+      "data": [2880, 4199, 5109, 6153]
+    },
+    {
+      "labels": ["Same Day"],
+      "data": [1198, 1146, 2615, 2195]
+    },
+    {
+      "labels": ["Second Class"],
+      "data": [5113, 6501, 5881, 9238]
+    },
+    {
+      "labels": ["Standard Class"],
+      "data": [15762, 15513, 18056, 21846]
+    }
+  ]
+}

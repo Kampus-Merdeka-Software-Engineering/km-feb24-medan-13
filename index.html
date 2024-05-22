@@ -24,7 +24,7 @@
         </div>
         <ul>
             <li><a href="#hero-section">Home</a></li>
-            <li><a href="dashboard.html" target="_blank">Dashboard</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
             <li><a href="#our-team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -35,12 +35,12 @@
     <header class="container" id="hero-section">
         <div class="hero">
             <section class="hero-left">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                <h1>Team 13 - Medan</h1>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, nesciunt? Suscipit ad molestiae,
-                    laboriosam adipisci blanditiis unde architecto expedita consequuntur.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptates natus omnis recusandae
+                    dicta, ducimus a perspiciatis amet reprehenderit quae!
                 </p>
-                <a href="#">Lorem, ipsum.</a>
+                <a href="#">Explore</a>
             </section>
 
             <section class="right">
@@ -49,6 +49,7 @@
         </div>
     </header>
     <!-- hero -->
+
     <!-- Filter section -->
     <section class="filter-section-container" id="dashboard">
         <div class="chart-title">
@@ -63,7 +64,6 @@
                 <option value="2016">2016</option>
                 <option value="2017">2017</option>
             </select>
-            <button onclick="applyFilter('yearChart', 'filterYear')">Apply</button>
         </div>
     </section>
     <!-- End Filter section -->
@@ -71,8 +71,8 @@
     <!-- chart -->
     <div class="content">
         <div class="card c1">
-            <h3>Profit by Year</h3>
-            <canvas id="yearChart" width="200" height="150"></canvas>
+            <h3>Profit by Category</h3>
+            <canvas id="categoryChart" width="200" height="150"></canvas>
         </div>
         <div class="card c2">
             <h3>Profit by Segment</h3>
@@ -83,12 +83,12 @@
             <canvas id="shipModeChart" width="200" height="150"></canvas>
         </div>
         <div class="card c4">
-            <h3>Top 5 Profit by City</h3>
-            <canvas id="cityChart" width="200" height="150"></canvas>
+            <h3>Profit by Year</h3>
+            <canvas id="yearChart" width="200" height="150"></canvas>
         </div>
         <div class="card c5">
-            <h3>Profit by Category</h3>
-            <canvas id="categoryChart" width="200" height="150"></canvas>
+            <h3>Top 5 Profit by City</h3>
+            <canvas id="cityChart" width="200" height="150"></canvas>
         </div>
         <div class="card c6">
             <h3>Top Products</h3>
@@ -97,78 +97,9 @@
     </div>
     <!-- chart -->
 
-    <!-- Our Team -->
-    <!-- <section class="our-team" id="our-team">
-        <div class="container">
-            <h2>Our Team</h2>
-            <div class="team-members">
-                <div class="team-member">
-                    <h3>Jovi Cahyono</h3>
-                    <p>Project Leader</p>
-                </div>
-                <div class="team-member">
-                    <h3>Fahri</h3>
-                    <p>Front End Engineer</p>
-                </div>
-                <div class="team-member">
-                    <h3>Helmelya</h3>
-                    <p>Front End Engineer</p>
-                </div>
-                <div class="team-member">
-                    <h3>Annisa</h3>
-                    <p>Front End Engineer</p>
-                </div>
-                <div class="team-member">
-                    <h3>Pina</h3>
-                    <p>Front End Engineer</p>
-                </div>
-                <div class="team-member">
-                    <h3>Nila</h3>
-                    <p>Deployment</p>
-                </div>
-                <div class="team-member">
-                    <h3>Ummah</h3>
-                    <p>Pitch Deck</p>
-                </div>
-                <div class="team-member">
-                    <h3>Nadhirah</h3>
-                    <p>Pitch Deck</p>
-                </div>
-                <div class="team-member">
-                    <h3>Stella</h3>
-                    <p>Pitch Deck</p>
-                </div>
-                <div class="team-member">
-                    <h3>Oryza</h3>
-                    <p>Quality Assurance</p>
-                </div>
-                <div class="team-member">
-                    <h3>Hilmy</h3>
-                    <p>Quality Assurance</p>
-                </div>
-                <div class="team-member">
-                    <h3>Dita</h3>
-                    <p>Quality Assurance</p>
-                </div>
-
-            </div>
-        </div>
-    </section> -->
-    <!-- Our Team -->
-
-    <!-- <section id="dashboards">
-        <iframe
-            src="https://lookerstudio.google.com/embed/reporting/c7bef115-bb28-41db-a55f-166bfbc2bb45/page/6JeuD"
-            frameborder="0" style="border:0" allowfullscreen></iframe>
-        <br />
-        <button class="click-button"
-            onclick="window.open('https://lookerstudio.google.com/reporting/c7bef115-bb28-41db-a55f-166bfbc2bb45', '_blank')">
-            To the site
-        </button>
-    </section> -->
-
+    <!-- team -->
     <div class="cover" id="our-team">
-        <h2 class="team-heading" >Our Team</h2>
+        <h2 class="team-heading">Our Team</h2>
         <ul class="cover2">
             <li class="card">
                 <div class="foto">
@@ -264,15 +195,15 @@
             <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
                 </div>
                 <button type="submit">Send</button>
             </form>
@@ -296,17 +227,26 @@
             </div>
             <div class="footer-social">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"><i
+                                class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/tim.js" defer></script>
+    <script src="js/chartSegment.js" defer></script>
+    <script src="js/chartYear.js" defer></script>
+    <script src="js/chartCategory.js" defer></script>
+    <script src="js/chartShipMode.js" defer></script>
+    <script src="js/chartCity.js" defer></script>
+    <script src="js/chartProduct.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
