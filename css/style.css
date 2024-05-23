@@ -8,7 +8,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 
@@ -37,13 +37,31 @@ nav li {
 }
 
 nav a {
+  position: relative;
   text-decoration: none;
   color: #333;
+  padding-bottom: 5px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #007bff;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
 }
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #007bff;
+}
+
 
 .hamburger-menu {
   display: none;
@@ -122,6 +140,11 @@ nav a:hover {
 .right img {
   width: 100%;
   max-width: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.right img:hover {
+  transform: scale(1.05);
 }
 
 /* hero section end */
@@ -140,11 +163,38 @@ nav a:hover {
     "c4 c5 c6";
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.content .card {
+  opacity: 0;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.animate-in-view .content .card {
+  opacity: 1;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
 .card {
   background-color: rgb(246, 241, 241);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card h2 {
@@ -356,10 +406,25 @@ button[type="submit"]:hover {
 /* contact section end */
 
 /* footer section start */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 footer {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeIn 1s ease-out forwards; 
 }
 
 .footer-container {
@@ -419,6 +484,7 @@ footer {
   text-decoration: none;
   font-size: 20px;
 }
+
 /* footer section end */
 
 /* Responsive layout */
@@ -642,7 +708,17 @@ footer {
     gap: 16px;
     border-radius: 8px;
     scroll-behavior: smooth;
-    justify-content: center; /* Tambahkan baris ini */
+    justify-content: center; 
+  }
+    .content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6";
   }
 }
 
