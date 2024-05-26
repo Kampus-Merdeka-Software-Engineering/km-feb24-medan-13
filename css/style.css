@@ -11,7 +11,6 @@ html {
   overflow-x: hidden;
 }
 
-
 /* navbar section start */
 nav {
   position: fixed;
@@ -421,123 +420,6 @@ footer {
 }
 /* footer section end */
 
-/* Responsive layout */
-@media screen and (max-width: 1000px) {
-  nav img {
-    width: 100px;
-  }
-
-  nav li {
-    list-style: none;
-    margin: 0 8px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero .right {
-    order: -1;
-    padding-bottom: 5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  html {
-    font-size: 62.5%;
-  }
-  .hero {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero .content {
-    order: 2;
-  }
-
-  .hero .content h1 {
-    font-size: 3rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .hero .content h1 br {
-    display: none;
-  }
-
-  .hero .content p {
-    padding-bottom: 5rem;
-  }
-
-  .hero .content p br {
-    display: none;
-  }
-
-  .hero img {
-    margin-top: 5rem;
-    order: 1;
-    max-width: 1000px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  nav ul.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-  .content {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "c1"
-      "c2"
-      "c3"
-      "c4"
-      "c5"
-      "c6";
-  }
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-menu {
-    margin-bottom: 20px;
-  }
-  .team-member {
-    margin: 15px;
-    max-width: 150px;
-    flex-basis: 50%;
-  }
-  .contact {
-    margin-top: -300px;
-  }
-  .cover2 .card {
-    margin-bottom: 200px; /* Menambahkan margin bawah */
-  }
-}
-
 .cover {
   margin-top: 100px;
   position: relative;
@@ -632,6 +514,81 @@ footer {
   font-size: 1.31rem;
 }
 
+/* Responsive layout */
+@media screen and (max-width: 1000px) {
+  nav img {
+    width: 100px;
+  }
+
+  nav li {
+    list-style: none;
+    margin: 0 8px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .right {
+    order: -1;
+    padding-bottom: 5rem;
+  }
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "c5 c6";
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+  .hero {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .content {
+    order: 2;
+  }
+
+  .hero .content h1 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero .content h1 br {
+    display: none;
+  }
+
+  .hero .content p {
+    padding-bottom: 5rem;
+  }
+
+  .hero .content p br {
+    display: none;
+  }
+
+  .hero img {
+    margin-top: 5rem;
+    order: 1;
+    max-width: 1000px;
+  }
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "c5 c6";
+  }
+}
+
 @media screen and (max-width: 900px) {
   .cover .cover2 {
     display: grid;
@@ -642,12 +599,89 @@ footer {
     gap: 16px;
     border-radius: 8px;
     scroll-behavior: smooth;
-    justify-content: center; /* Tambahkan baris ini */
+    justify-content: center;
+  }
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "c5 c6";
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6";
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-menu {
+    margin-bottom: 20px;
+  }
+  .team-member {
+    margin: 15px;
+    max-width: 150px;
+    flex-basis: 50%;
+  }
+  .contact {
+    margin-top: -300px;
+  }
+  .cover2 .card {
+    margin-bottom: 200px; /* Menambahkan margin bawah */
   }
 }
 
 @media screen and (max-width: 600px) {
   .cover .cover2 {
     grid-auto-columns: calc((115% / 1));
+  }
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6";
+  }
+  #card {
+    max-width: 50%; /* Membuat canvas tidak melebihi lebar parent */
+    height: auto; /* Memastikan aspek rasio tetap terjaga */
   }
 }

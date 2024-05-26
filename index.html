@@ -92,7 +92,23 @@
         </div>
         <div class="card c6">
             <h3>Top Products</h3>
-            <div id="topProductsTable" class="scrollable-table"></div>
+            <div id="searchContainer">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <div id="topProductsTable" class="scrollable-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product</th>
+                            <th>Profit</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button onclick="clearSearch()">Clear</button> <!-- Tombol Clear -->
+            </div>
         </div>
     </div>
     <!-- chart -->
