@@ -1,23 +1,21 @@
 let originalProducts = []; // Variabel untuk menyimpan produk asli sebelum pencarian
 
-// Function to fetch data from JSON file
 async function fetchData() {
   try {
-    const response = await fetch("/data/product.json"); // Sesuaikan dengan path ke file JSON Anda
+    const response = await fetch("/data/product.json"); 
     const data = await response.json();
-    originalProducts = data.topProductsData; // Simpan data asli ke dalam variabel
+    originalProducts = data.topProductsData;
     return originalProducts;
   } catch (error) {
     console.error("Error fetching data:", error);
-    throw error; // Lepaskan error untuk ditangani di luar
+    throw error; 
   }
 }
 
 // Function to render products
 function renderProducts(products) {
   const topProductsTableBody = document.querySelector("#topProductsTable tbody");
-  topProductsTableBody.innerHTML = ""; // Kosongkan konten sebelumnya
-
+  topProductsTableBody.innerHTML = ""; 
   products.forEach((product, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -33,7 +31,7 @@ function renderProducts(products) {
 async function searchProducts() {
   const searchInput = document.getElementById("searchInput").value.toLowerCase();
   try {
-    const products = originalProducts; // Gunakan data asli
+    const products = originalProducts;
     const filteredProducts = products.filter(product => product.product.toLowerCase().includes(searchInput));
     renderProducts(filteredProducts);
     
@@ -51,9 +49,9 @@ async function searchProducts() {
 
 // Function to clear search and reset table
 function clearSearch() {
-  document.getElementById("searchInput").value = ""; // Clear search input
-  renderProducts(originalProducts); // Render original products
-  document.querySelector("#topProductsTable thead").style.display = "table-header-group"; // Show table header
+  document.getElementById("searchInput").value = ""; 
+  renderProducts(originalProducts); 
+  document.querySelector("#topProductsTable thead").style.display = "table-header-group";
 }
 
 // Initial rendering
