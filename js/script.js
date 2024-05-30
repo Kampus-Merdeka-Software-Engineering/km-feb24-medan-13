@@ -19,7 +19,7 @@ $(document).ready(function () {
     dataType: "json",
     success: function (response) {
       var data = response.data;
-      // Add a custom index column
+      // Add a custom  column
       data.forEach(function (row, index) {
         row["Row ID"] = index + 1;
       });
@@ -33,7 +33,7 @@ $(document).ready(function () {
         ],
         pageLength: 5,
         columns: [
-          { data: "Row ID" }, // Custom index column
+          { data: "Row ID" }, // Custom column
           { data: "Order ID" },
           { data: "Order Date" },
           { data: "Ship Date" },

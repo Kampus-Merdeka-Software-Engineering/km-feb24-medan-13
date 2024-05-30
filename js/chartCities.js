@@ -27,18 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
       color.replace("0.7", "1")
     );
 
-    const labels = Object.keys(colors).map((key) => ({
-      color: colors[key],
-      label: `Top City in ${key}`,
-    }));
-
     chart = new Chart(ctx, {
       type: "bar",
       data: {
         labels: cities,
         datasets: [
           {
-            label: "Profit",
+            label: "Top City per Year",
             data: profits,
             backgroundColor: backgroundColor,
             borderColor: borderColor,
@@ -50,18 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         scales: {
           y: {
             beginAtZero: true,
-          },
-        },
-        plugins: {
-          legend: {
-            labels: {
-              generateLabels: function (chart) {
-                return labels.map((label) => ({
-                  text: label.label,
-                  fillStyle: label.color,
-                }));
-              },
-            },
           },
         },
       },
