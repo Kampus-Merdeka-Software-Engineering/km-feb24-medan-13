@@ -1,30 +1,22 @@
 {
     "2014": [
-        {"city": "CityA", "profit": 50000},
-        {"city": "CityB", "profit": 45000},
-        {"city": "CityC", "profit": 40000},
-        {"city": "CityD", "profit": 35000},
-        {"city": "CityE", "profit": 30000}
+        {"city": "Los Angeles", "profit": 2974},
+        {"city": "New York City", "profit": 2614},
+        {"city": "San Francisco", "profit": 2544}
     ],
     "2015": [
-        {"city": "CityF", "profit": 55000},
-        {"city": "CityG", "profit": 52000},
-        {"city": "CityH", "profit": 51000},
-        {"city": "CityI", "profit": 48000},
-        {"city": "CityJ", "profit": 47000}
+        {"city": "New York City", "profit": 3496},
+        {"city": "Los Angeles", "profit": 3229},
+        {"city": "San Francisco", "profit": 1707}
     ],
     "2016": [
-        {"city": "CityK", "profit": 60000},
-        {"city": "CityL", "profit": 59000},
-        {"city": "CityM", "profit": 58000},
-        {"city": "CityN", "profit": 57000},
-        {"city": "CityO", "profit": 56000}
+        {"city": "New York City", "profit": 4306},
+        {"city": "Los Angeles", "profit": 3290},
+        {"city": "San Francisco", "profit": 2000}
     ],
     "2017": [
-        {"city": "CityP", "profit": 65000},
-        {"city": "CityQ", "profit": 64000},
-        {"city": "CityR", "profit": 63000},
-        {"city": "CityS", "profit": 62000},
-        {"city": "CityT", "profit": 61000}
+        {"city": "New York City", "profit": 4462},
+        {"city": "Los Angeles", "profit": 3877},
+        {"city": "Seattle", "profit": 3225}
     ]
 }

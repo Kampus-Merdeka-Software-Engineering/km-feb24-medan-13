@@ -12,7 +12,7 @@ gsap.from(".right img", {
   delay: 0.3,
 });
 
-//top product table
+//table
 $(document).ready(function () {
   $.ajax({
     url: "/data/superstore.json",
@@ -27,6 +27,11 @@ $(document).ready(function () {
         data: data,
         scrollX: true,
         responsive: true,
+        lengthMenu: [
+          [5, 10, 15, 20, 25, 50, 100],
+          [5, 10, 15, 20, 25, 50, 100],
+        ],
+        pageLength: 5,
         columns: [
           { data: "Row ID" }, // Custom index column
           { data: "Order ID" },
