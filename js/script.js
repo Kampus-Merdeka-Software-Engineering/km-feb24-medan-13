@@ -1,3 +1,60 @@
+//gsap
+gsap.from(".hero-left", {
+  opacity: 0,
+  x: -50,
+  duration: 1,
+  delay: 0.3,
+});
+gsap.from(".right img", {
+  opacity: 0,
+  x: 50,
+  duration: 1,
+  delay: 0.3,
+});
+
+//top product table
+$(document).ready(function () {
+  $.ajax({
+    url: "/data/superstore.json",
+    dataType: "json",
+    success: function (response) {
+      var data = response.data;
+      // Add a custom index column
+      data.forEach(function (row, index) {
+        row["Row ID"] = index + 1;
+      });
+      $("#example").DataTable({
+        data: data,
+        scrollX: true,
+        responsive: true,
+        columns: [
+          { data: "Row ID" }, // Custom index column
+          { data: "Order ID" },
+          { data: "Order Date" },
+          { data: "Ship Date" },
+          { data: "Ship Mode" },
+          { data: "Customer ID" },
+          { data: "Customer Name" },
+          { data: "Segment" },
+          { data: "Country" },
+          { data: "City" },
+          { data: "State" },
+          { data: "Postal Code" },
+          { data: "Region" },
+          { data: "Product ID" },
+          { data: "Category" },
+          { data: "Sub-Category" },
+          { data: "Product Name" },
+          { data: "Sales" },
+          { data: "Quantity" },
+          { data: "Discount" },
+          { data: "Profit" },
+        ],
+      });
+    },
+  });
+});
+
 //filter change
 const filterYearly = document.getElementById("filterYear");
 

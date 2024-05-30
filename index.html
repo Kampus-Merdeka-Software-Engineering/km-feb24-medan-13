@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
 </head>
 
 <body>
@@ -37,8 +38,7 @@
             <section class="hero-left">
                 <h1>Team 13 - Medan</h1>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptates natus omnis recusandae
-                    dicta, ducimus a perspiciatis amet reprehenderit quae!
+                    Welcome to the Superstore Dashboard, your hub for tracking and analyzing profit data.
                 </p>
                 <a href="#">Explore</a>
             </section>
@@ -88,7 +88,7 @@
         </div>
         <div class="card c5">
             <h3>Top 5 Profit by City</h3>
-            <canvas id="cityChart" width="200" height="150"></canvas>
+            <canvas id="profitChart" width="200" height="150"></canvas>
         </div>
         <div class="card c6">
             <h3>Top Products</h3>
@@ -107,11 +107,41 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-                <button onclick="clearSearch()">Clear</button> <!-- Tombol Clear -->
+                <button onclick="clearSearch()">Clear</button>
             </div>
         </div>
     </div>
     <!-- chart -->
+
+    <div class="table-container">
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Row ID</th> <!-- Custom index column -->
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>Ship Date</th>
+                    <th>Ship Mode</th>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Segment</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Postal Code</th>
+                    <th>Region</th>
+                    <th>Product ID</th>
+                    <th>Category</th>
+                    <th>Sub-Category</th>
+                    <th>Product Name</th>
+                    <th>Sales</th>
+                    <th>Quantity</th>
+                    <th>Discount</th>
+                    <th>Profit</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 
     <!-- team -->
     <div class="cover" id="our-team">
@@ -254,6 +284,13 @@
         </div>
     </footer>
 
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- Include DataTables JS -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
     <script src="js/script.js"></script>
     <script src="js/tim.js" defer></script>
     <script src="js/chartSegment.js" defer></script>
@@ -262,6 +299,7 @@
     <script src="js/chartShipMode.js" defer></script>
     <script src="js/chartCity.js" defer></script>
     <script src="js/chartProduct.js" defer></script>
+    <script src="js/chartCities.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 

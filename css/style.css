@@ -59,6 +59,7 @@ nav a:hover {
   margin: 5px auto;
   transition: 0.4s;
 }
+
 /* navbar section start */
 
 /* hero section start */
@@ -99,7 +100,7 @@ nav a:hover {
 }
 .hero-left a {
   margin-left: 30px;
-  padding: 10px 15px;
+  padding: 10px 50px;
   background: #007bff;
   color: #fff;
   font-weight: 600;
@@ -108,7 +109,7 @@ nav a:hover {
   border: none;
   outline: none;
   transition: 0.3s all ease;
-  border-radius: 20px;
+  border-radius: 10px;
   text-decoration: none;
 }
 .hero-left a:hover {
@@ -125,6 +126,11 @@ nav a:hover {
 
 /* hero section end */
 
+.table-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 /* chart section start */
 .content {
   background-color: #fff;
@@ -137,6 +143,13 @@ nav a:hover {
   grid-template-areas:
     "c1 c2 c3"
     "c4 c5 c6";
+}
+
+.card {
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card {
@@ -294,6 +307,10 @@ button:hover {
   font-size: 14px;
   color: #666;
   margin: 0;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
 }
 /* team section end */
 
