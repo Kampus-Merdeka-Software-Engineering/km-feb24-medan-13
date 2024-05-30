@@ -29,7 +29,6 @@ Untuk mengkloning repositori proyek ini, ikuti langkah-langkah berikut:
 
 5. Tekan Enter. Proyek akan mulai diunduh ke direktori yang Anda tentukan.
 
-6. Jangan lupa ganti script src pathnya di index.html, contoh : /km-feb24-medan-13/js/nama_javascript.js
 
 ## Kontribusi
 
