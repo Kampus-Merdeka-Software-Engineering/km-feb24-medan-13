@@ -669,6 +669,7 @@ footer {
 
   .hamburger-menu {
     display: block;
+    margin-top: 20px;
   }
   .content {
     grid-template-columns: 1fr;
@@ -702,6 +703,9 @@ footer {
     margin: 15px 0;
     max-width: calc(100% - 30px);
     flex-basis: 100%;
+  }
+  nav .logo {
+    font-size: 16px;
   }
 }
 
