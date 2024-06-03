@@ -41,13 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         ],
       },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
-      },
     });
   }
 

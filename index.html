@@ -50,6 +50,7 @@
     </header>
     <!-- hero -->
 
+    
     <!-- Filter section -->
     <section class="filter-section-container" id="dashboard">
         <div class="chart-title">
@@ -70,27 +71,27 @@
 
     <!-- chart -->
     <div class="content">
-        <div class="card c1">
+        <div class="card">
             <h3>Profit by Category</h3>
             <canvas id="categoryChart" width="200" height="150"></canvas>
         </div>
-        <div class="card c2">
+        <div class="card">
             <h3>Profit by Segment</h3>
             <canvas id="segmentChart" width="200" height="150"></canvas>
         </div>
-        <div class="card c3">
+        <div class="card">
             <h3>Profit by Ship Mode</h3>
             <canvas id="shipModeChart" width="200" height="150"></canvas>
         </div>
-        <div class="card c4">
+        <div class="card">
             <h3>Profit by Year</h3>
             <canvas id="yearChart" width="200" height="150"></canvas>
         </div>
-        <div class="card c5">
+        <div class="card">
             <h3>Top 5 Profit by City</h3>
             <canvas id="profitChart" width="200" height="150"></canvas>
         </div>
-        <div class="card c6">
+        <div class="card">
             <h3>Top Products</h3>
             <div id="searchContainer">
                 <input type="text" id="searchInput" placeholder="Search...">
@@ -286,6 +287,8 @@
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="js/script.js"></script>
     <script src="js/tim.js" defer></script>
@@ -293,10 +296,8 @@
     <script src="js/chartYear.js" defer></script>
     <script src="js/chartCategory.js" defer></script>
     <script src="js/chartShipMode.js" defer></script>
-    <script src="js/chartCity.js" defer></script>
     <script src="js/chartProduct.js" defer></script>
     <script src="js/chartCities.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>

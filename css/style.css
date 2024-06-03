@@ -8,6 +8,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: auto;
 }
 
 /* navbar section start */
@@ -32,6 +33,7 @@ nav ul {
 nav li {
   margin-left: 20px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 nav a {
@@ -41,6 +43,10 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+nav .logo {
+  font-size: 24px;
 }
 
 .hamburger-menu {
@@ -557,6 +563,9 @@ footer {
       "c3 c4"
       "c5 c6";
   }
+  .cover .cover2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 992px) {
@@ -602,6 +611,16 @@ footer {
       "c1 c2"
       "c3 c4"
       "c5 c6";
+  }
+  .contact {
+    margin-top: -400px;
+  }
+  .cover2 .card {
+    margin-bottom: 200px;
+  }
+  .our-team {
+    margin-bottom: 50px;
+    padding: 30px 0;
   }
 }
 
@@ -669,16 +688,20 @@ footer {
   .footer-menu {
     margin-bottom: 20px;
   }
-  .team-member {
-    margin: 15px;
-    max-width: 150px;
-    flex-basis: 50%;
-  }
   .contact {
-    margin-top: -300px;
+    margin-top: -400px;
   }
   .cover2 .card {
-    margin-bottom: 200px; /* Menambahkan margin bawah */
+    margin-bottom: 200px;
+  }
+  .our-team {
+    margin-bottom: 50px;
+    padding: 30px 0;
+  }
+  .team-member {
+    margin: 15px 0;
+    max-width: calc(100% - 30px);
+    flex-basis: 100%;
   }
 }
 
@@ -697,7 +720,7 @@ footer {
       "c6";
   }
   #card {
-    max-width: 50%; /* Membuat canvas tidak melebihi lebar parent */
-    height: auto; /* Memastikan aspek rasio tetap terjaga */
+    max-width: 50%;
+    height: auto;
   }
 }
