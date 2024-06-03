@@ -136,6 +136,68 @@ nav .logo {
   margin-right: 20px;
 }
 
+.flex_response {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.kpi-section {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  width: 80%;
+}
+
+.metric_box {
+  margin-bottom: 30px;
+  width: 15%;
+  text-align: center;
+  margin: auto;
+
+  span {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(72, 99, 160, 1);
+  }
+
+  p {
+    font-size: 24px;
+  }
+}
+
+.kpi {
+  min-height: 200px;
+  margin: auto;
+
+  div {
+    width: 200px;
+  }
+}
+
+.kpi-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.faker {
+  text-align: center;
+  font-size: 18px;
+  color: grey;
+}
+
+hr {
+  width: 40%;
+  border: 1px solid rgb(200, 200, 200);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 /* chart section start */
 .content {
   background-color: #fff;
@@ -266,6 +328,7 @@ tr:nth-child(even) {
 
 .chart-text {
   font-size: 32px;
+  text-align: center;
 }
 
 button:hover {
@@ -443,13 +506,14 @@ footer {
 /* footer section end */
 
 .cover {
-  margin-top: 100px;
+  margin-top: 20px;
+  margin-bottom: -100px;
   position: relative;
   display: flex;
   padding: 0 20px;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 800px;
   overflow: hidden;
 }
 
@@ -500,7 +564,7 @@ footer {
 
 .cover2 .card {
   scroll-snap-align: start;
-  height: 342px;
+  height: 330px;
   list-style: none;
   background: #fff;
   cursor: pointer;
@@ -616,10 +680,10 @@ footer {
     margin-top: -400px;
   }
   .cover2 .card {
-    margin-bottom: 200px;
+    margin-bottom: 80px;
   }
   .our-team {
-    margin-bottom: 50px;
+    margin-bottom: -50px;
     padding: 30px 0;
   }
 }
@@ -694,6 +758,7 @@ footer {
   }
   .cover2 .card {
     margin-bottom: 200px;
+    margin-left: 14px;
   }
   .our-team {
     margin-bottom: 50px;

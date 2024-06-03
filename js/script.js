@@ -1,3 +1,69 @@
+// Data JSON yang menunjukkan nilai KPI untuk penjualan (sales) dan keuntungan (profit) per tahun
+var kpiData = {
+  "periods": [
+    {
+      "year": "2014",
+      "sales": 215228,
+      "profit": 24952
+    },
+    {
+      "year": "2015",
+      "sales": 205325,
+      "profit": 27360
+    },
+    {
+      "year": "2016",
+      "sales": 263307,
+      "profit": 31660
+    },
+    {
+      "year": "2017",
+      "sales": 327115,
+      "profit": 39431
+    },
+    {
+      "year": "Total",
+      "sales": 1010975,
+      "profit": 123403
+    }
+  ]
+};
+
+// Fungsi untuk mengisi nilai KPI ke dalam elemen HTML
+function fillKPIValues(year, data) {
+  if (year === "All") {
+      var totalSales = data.periods.find(function(period) {
+          return period.year === "Total";
+      }).sales;
+      var totalProfit = data.periods.find(function(period) {
+          return period.year === "Total";
+      }).profit;
+      document.getElementById('salesKPI').innerText = totalSales;
+      document.getElementById('profitKPI').innerText = totalProfit;
+  } else {
+      var yearData = data.periods.find(function(period) {
+          return period.year === year;
+      });
+      if (yearData) {
+          document.getElementById('salesKPI').innerText = yearData.sales;
+          document.getElementById('profitKPI').innerText = yearData.profit;
+      } else {
+          document.getElementById('salesKPI').innerText = "Data not available";
+          document.getElementById('profitKPI').innerText = "Data not available";
+      }
+  }
+}
+
+// Memanggil fungsi fillKPIValues dengan data kpiData untuk tahun pertama
+fillKPIValues("All", kpiData);
+
+// Menambahkan event listener untuk mendengarkan perubahan pada dropdown
+document.getElementById('filterYear').addEventListener('change', function() {
+  var selectedYear = this.value; // Mendapatkan nilai tahun yang dipilih dari dropdown
+  fillKPIValues(selectedYear, kpiData); // Memanggil fungsi fillKPIValues dengan tahun yang dipilih
+});
+
+
 //gsap
 gsap.from(".hero-left", {
   opacity: 0,
