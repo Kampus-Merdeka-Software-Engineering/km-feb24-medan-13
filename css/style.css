@@ -39,10 +39,12 @@ nav li {
 nav a {
   text-decoration: none;
   color: #333;
+  transition: color 0.3s ease; 
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: #0056b3; 
 }
 
 nav .logo {
@@ -62,7 +64,17 @@ nav .logo {
   height: 3px;
   background-color: #333;
   margin: 5px auto;
-  transition: 0.4s;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* navbar section start */
@@ -159,7 +171,7 @@ nav .logo {
     font-size: 2.8rem;
     font-weight: bold;
     text-align: center;
-    color: rgba(72, 99, 160, 1);
+    color: #007bff;
   }
 
   p {
@@ -677,7 +689,7 @@ footer {
       "c5 c6";
   }
   .contact {
-    margin-top: -400px;
+    margin-top: -300px;
   }
   .cover2 .card {
     margin-bottom: 80px;
