@@ -39,16 +39,40 @@ nav li {
 nav a {
   text-decoration: none;
   color: #333;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
-  color: #0056b3; 
+  text-decoration: none;
+  color: #0056b3;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #0056b3;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+nav a:hover::after{
+  transform: scaleX(0.4);
 }
 
 nav .logo {
   font-size: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+  width: 30px;
+  height: auto;
 }
 
 .hamburger-menu {
@@ -57,6 +81,9 @@ nav .logo {
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+.hamburger-menu.active{
+  transition: 0.5s;
 }
 
 .hamburger-menu .bar {
@@ -333,6 +360,7 @@ tr:nth-child(even) {
 }
 
 .chart-title {
+  padding: 10rem 7% 1.4rem;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -396,7 +424,7 @@ button:hover {
 
 /* contact section start */
 .contact {
-  padding: 80px 0;
+  padding: 10rem 7% 1.4rem;
   text-align: center;
   margin-top: -120px;
 }
@@ -518,6 +546,7 @@ footer {
 /* footer section end */
 
 .cover {
+  padding: 10rem 7% 1.4rem;
   margin-top: 20px;
   margin-bottom: -100px;
   position: relative;
@@ -698,6 +727,16 @@ footer {
     margin-bottom: -50px;
     padding: 30px 0;
   }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    margin-right: 10px;
+    size: 20px;
+    width: 30px;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -718,6 +757,16 @@ footer {
       "c1 c2"
       "c3 c4"
       "c5 c6";
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    margin-right: 10px;
+    size: 20px;
+    width: 30px;
+    height: auto;
   }
 }
 
@@ -783,6 +832,16 @@ footer {
   }
   nav .logo {
     font-size: 16px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    margin-right: 10px;
+    size: 20px;
+    width: 30px;
+    height: auto;
   }
 }
 
