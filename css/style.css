@@ -9,6 +9,7 @@ html {
   padding: 0;
   height: 100%;
   width: auto;
+  scroll-behavior: smooth;
 }
 
 /* navbar section start */
@@ -237,67 +238,6 @@ hr {
   margin-bottom: 15px;
 }
 
-/* chart section start */
-.content {
-  background-color: #fff;
-  margin-top: 60px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 20px;
-  grid-template-areas:
-    "c1 c2 c3"
-    "c4 c5 c6";
-}
-
-.card {
-  transition: transform 0.2s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card {
-  background-color: rgb(246, 241, 241);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.card p {
-  color: #666;
-}
-
-.c1 {
-  grid-area: c1;
-}
-
-.c2 {
-  grid-area: c2;
-}
-
-.c3 {
-  grid-area: c3;
-}
-
-.c4 {
-  grid-area: c4;
-}
-
-.c5 {
-  grid-area: c5;
-}
-
-.c6 {
-  grid-area: c6;
-}
-
 .controls {
   display: flex;
   align-items: center;
@@ -325,42 +265,8 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th {
-  background-color: #f2f2f2;
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Style untuk baris ganjil pada body tabel */
-tr:nth-child(odd) {
-  background-color: #f2f2f2;
-}
-
-/* Style untuk baris genap pada body tabel */
-tr:nth-child(even) {
-  background-color: #ffffff;
-}
-
-.scrollable-table {
-  overflow-y: scroll;
-  height: 300px;
-}
-
 .chart-title {
-  padding: 10rem 7% 1.4rem;
+  padding: 9rem 7% 1.4rem;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -369,10 +275,6 @@ tr:nth-child(even) {
 .chart-text {
   font-size: 32px;
   text-align: center;
-}
-
-button:hover {
-  background-color: #0056b3;
 }
 /* chart section end */
 
@@ -465,6 +367,7 @@ button:hover {
 button[type="submit"] {
   display: block;
   width: 100%;
+  margin: 0;
   padding: 10px;
   background-color: #007bff;
   color: #fff;
@@ -551,7 +454,7 @@ footer {
   margin-bottom: -100px;
   position: relative;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 800px;
@@ -562,16 +465,15 @@ footer {
   text-align: center;
   width: 100%;
   font-size: 32px;
-  margin-bottom: 40px
+  margin-bottom: 40px;
 }
 
 .cover2 {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 16px;
-  width: 100%; 
+  width: 100%;
 }
-
 
 .cover .cover2 {
   display: grid;
@@ -647,6 +549,87 @@ footer {
   font-size: 1.31rem;
 }
 
+/* General styles */
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 0 10px;
+  padding: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+h3 {
+  margin-top: 0;
+}
+
+canvas {
+  width: 90% !important;
+  max-height: 350px !important;
+}
+
+#searchContainer {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.scrollable-table {
+  overflow-x: auto;
+  max-height: 300px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #f8f8f8;
+}
+
 /* Responsive layout */
 @media screen and (max-width: 1000px) {
   nav img {
@@ -667,16 +650,16 @@ footer {
     order: -1;
     padding-bottom: 5rem;
   }
-  .content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "c1 c2"
-      "c3 c4"
-      "c5 c6";
-  }
   .cover .cover2 {
     grid-template-columns: repeat(2, 1fr);
     padding: 30px 0;
+  }
+  .card {
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
   }
 }
 
@@ -717,13 +700,6 @@ footer {
     order: 1;
     max-width: 1000px;
   }
-  .content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "c1 c2"
-      "c3 c4"
-      "c5 c6";
-  }
   .contact {
     margin-top: -300px;
   }
@@ -744,6 +720,13 @@ footer {
     width: 30px;
     height: auto;
   }
+  .card {
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -759,13 +742,6 @@ footer {
     justify-content: center;
     padding: 30px 0;
   }
-  .content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "c1 c2"
-      "c3 c4"
-      "c5 c6";
-  }
   .logo {
     display: flex;
     align-items: center;
@@ -775,6 +751,13 @@ footer {
     size: 20px;
     width: 30px;
     height: auto;
+  }
+  .card {
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
   }
 }
 
@@ -803,16 +786,6 @@ footer {
   .hamburger-menu {
     display: block;
     margin-top: 20px;
-  }
-  .content {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "c1"
-      "c2"
-      "c3"
-      "c4"
-      "c5"
-      "c6";
   }
   .footer-container {
     flex-direction: column;
@@ -851,6 +824,13 @@ footer {
     width: 30px;
     height: auto;
   }
+  .card {
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -858,18 +838,29 @@ footer {
     grid-auto-columns: calc((115% / 1));
     padding: 30px 0;
   }
-  .content {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "c1"
-      "c2"
-      "c3"
-      "c4"
-      "c5"
-      "c6";
-  }
   #card {
     max-width: 50%;
     height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  #searchContainer {
+    flex-direction: column;
+  }
+
+  button {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .card {
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
   }
 }

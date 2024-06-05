@@ -1,65 +1,63 @@
-
 var kpiData = {
-  "periods": [
+  periods: [
     {
-      "year": "2014",
-      "sales": 215228,
-      "profit": 24952
+      year: "2014",
+      sales: 215228,
+      profit: 24952,
     },
     {
-      "year": "2015",
-      "sales": 205325,
-      "profit": 27360
+      year: "2015",
+      sales: 205325,
+      profit: 27360,
     },
     {
-      "year": "2016",
-      "sales": 263307,
-      "profit": 31660
+      year: "2016",
+      sales: 263307,
+      profit: 31660,
     },
     {
-      "year": "2017",
-      "sales": 327115,
-      "profit": 39431
+      year: "2017",
+      sales: 327115,
+      profit: 39431,
     },
     {
-      "year": "Total",
-      "sales": 1010975,
-      "profit": 123403
-    }
-  ]
+      year: "Total",
+      sales: 1010975,
+      profit: 123403,
+    },
+  ],
 };
 
 function fillKPIValues(year, data) {
   if (year === "All") {
-      var totalSales = data.periods.find(function(period) {
-          return period.year === "Total";
-      }).sales;
-      var totalProfit = data.periods.find(function(period) {
-          return period.year === "Total";
-      }).profit;
-      document.getElementById('salesKPI').innerText = totalSales;
-      document.getElementById('profitKPI').innerText = totalProfit;
+    var totalSales = data.periods.find(function (period) {
+      return period.year === "Total";
+    }).sales;
+    var totalProfit = data.periods.find(function (period) {
+      return period.year === "Total";
+    }).profit;
+    document.getElementById("salesKPI").innerText = totalSales;
+    document.getElementById("profitKPI").innerText = totalProfit;
   } else {
-      var yearData = data.periods.find(function(period) {
-          return period.year === year;
-      });
-      if (yearData) {
-          document.getElementById('salesKPI').innerText = yearData.sales;
-          document.getElementById('profitKPI').innerText = yearData.profit;
-      } else {
-          document.getElementById('salesKPI').innerText = "Data not available";
-          document.getElementById('profitKPI').innerText = "Data not available";
-      }
+    var yearData = data.periods.find(function (period) {
+      return period.year === year;
+    });
+    if (yearData) {
+      document.getElementById("salesKPI").innerText = yearData.sales;
+      document.getElementById("profitKPI").innerText = yearData.profit;
+    } else {
+      document.getElementById("salesKPI").innerText = "Data not available";
+      document.getElementById("profitKPI").innerText = "Data not available";
+    }
   }
 }
 
 fillKPIValues("All", kpiData);
 
-document.getElementById('filterYear').addEventListener('change', function() {
+document.getElementById("filterYear").addEventListener("change", function () {
   var selectedYear = this.value;
   fillKPIValues(selectedYear, kpiData);
 });
-
 
 //gsap
 gsap.from(".hero-left", {
@@ -75,12 +73,24 @@ gsap.from(".right img", {
   delay: 0.3,
 });
 
+gsap.from(".hero-left h1", { opacity: 0, duration: 1, y: -50, delay: 0.5 });
 
-document.querySelector('.hamburger-menu').addEventListener('click', function() {
-  this.classList.toggle('active');
-  document.querySelector('nav ul').classList.toggle('show');
-});
+gsap.from(".hero-left p", { opacity: 0, duration: 1, y: -50, delay: 1 });
 
+gsap.from(".hero-left a", { opacity: 0, duration: 1, y: -50, delay: 1.5 });
+
+gsap.from(".chart-title", { opacity: 0, duration: 1, y: -50, delay: 0.5 });
+
+gsap.from(".controls", { opacity: 0, duration: 1, y: -50, delay: 1 });
+
+gsap.from(".kpi", { opacity: 0, duration: 1, y: -50, delay: 1 });
+
+document
+  .querySelector(".hamburger-menu")
+  .addEventListener("click", function () {
+    this.classList.toggle("active");
+    document.querySelector("nav ul").classList.toggle("show");
+  });
 
 //table
 $(document).ready(function () {
@@ -151,53 +161,10 @@ function toggleMenu() {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
 
-  // form.addEventListener("submit", function (event) {
-  //   event.preventDefault();
-
-  //   // Fetch form inputs
-  //   const nameInput = document.getElementById("name");
-  //   const emailInput = document.getElementById("email");
-  //   const messageInput = document.getElementById("message");
-
-  //   // Fetch error elements
-  //   const nameError = document.getElementById("name-error");
-  //   const emailError = document.getElementById("email-error");
-  //   const messageError = document.getElementById("message-error");
-
-  //   // Reset previous error messages
-  //   nameError.textContent = "";
-  //   emailError.textContent = "";
-  //   messageError.textContent = "";
-
-    // Validate inputs
-    let isValid = true;
-
-    if (nameInput.value.trim() === "") {
-      nameError.textContent = "Please enter your name";
-      isValid = false;
-    }
-
-    if (emailInput.value.trim() === "") {
-      emailError.textContent = "Please enter your email";
-      isValid = false;
-    } else if (!isValidEmail(emailInput.value.trim())) {
-      emailError.textContent = "Please enter a valid email address";
-      isValid = false;
-    }
-
-    if (messageInput.value.trim() === "") {
-      messageError.textContent = "Please enter your message";
-      isValid = false;
-    }
-
-    if (isValid) {
-      form.submit();
-    }
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    form.submit();
   });
+});
 
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-// });
 //contact end
