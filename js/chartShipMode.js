@@ -48,6 +48,9 @@ const updateShipModeChart = (datasets, year_filter = null) => {
       ],
       borderWidth: 1,
     },
+    option: {
+      responsive: true
+    }
   });
 };
 

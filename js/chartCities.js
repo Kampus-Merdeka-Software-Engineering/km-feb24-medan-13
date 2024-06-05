@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
             borderWidth: 1,
           },
         ],
+        option: {
+          responsive: true
+        }
       },
     });
   }

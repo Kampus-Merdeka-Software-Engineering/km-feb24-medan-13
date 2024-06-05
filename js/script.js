@@ -1,3 +1,4 @@
+
 var kpiData = {
   "periods": [
     {
@@ -150,23 +151,23 @@ function toggleMenu() {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  // form.addEventListener("submit", function (event) {
+  //   event.preventDefault();
 
-    // Fetch form inputs
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
+  //   // Fetch form inputs
+  //   const nameInput = document.getElementById("name");
+  //   const emailInput = document.getElementById("email");
+  //   const messageInput = document.getElementById("message");
 
-    // Fetch error elements
-    const nameError = document.getElementById("name-error");
-    const emailError = document.getElementById("email-error");
-    const messageError = document.getElementById("message-error");
+  //   // Fetch error elements
+  //   const nameError = document.getElementById("name-error");
+  //   const emailError = document.getElementById("email-error");
+  //   const messageError = document.getElementById("message-error");
 
-    // Reset previous error messages
-    nameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
+  //   // Reset previous error messages
+  //   nameError.textContent = "";
+  //   emailError.textContent = "";
+  //   messageError.textContent = "";
 
     // Validate inputs
     let isValid = true;
@@ -197,6 +198,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-  }
-});
+  };
+// });
 //contact end

@@ -35,6 +35,9 @@ const updateSegmentChart = (datasets, year_filter = null) => {
       labels: filter_labels,
       datasets: filter_data,
     },
+    option: {
+      responsive: true
+    }
   });
 };
 
