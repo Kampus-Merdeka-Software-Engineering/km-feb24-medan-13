@@ -48,7 +48,7 @@ nav a:hover {
 }
 
 nav a::after {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid #0056b3;
@@ -56,7 +56,7 @@ nav a::after {
   transition: 0.2s linear;
 }
 
-nav a:hover::after{
+nav a:hover::after {
   transform: scaleX(0.4);
 }
 
@@ -82,7 +82,7 @@ nav .logo {
   right: 20px;
   cursor: pointer;
 }
-.hamburger-menu.active{
+.hamburger-menu.active {
   transition: 0.5s;
 }
 
@@ -551,7 +551,7 @@ footer {
   margin-bottom: -100px;
   position: relative;
   display: flex;
-  padding: 0 20px;
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   min-height: 800px;
@@ -559,14 +559,19 @@ footer {
 }
 
 .team-heading {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   text-align: center;
   width: 100%;
   font-size: 32px;
+  margin-bottom: 40px
 }
+
+.cover2 {
+  display: flex;
+  flex-direction: column; 
+  gap: 16px;
+  width: 100%; 
+}
+
 
 .cover .cover2 {
   display: grid;
@@ -578,6 +583,7 @@ footer {
   border-radius: 8px;
   scroll-behavior: smooth;
   margin: 0 auto;
+  padding: 30px 0;
 }
 
 .cover2::-webkit-scrollbar {
@@ -670,6 +676,7 @@ footer {
   }
   .cover .cover2 {
     grid-template-columns: repeat(2, 1fr);
+    padding: 30px 0;
   }
 }
 
@@ -750,6 +757,7 @@ footer {
     border-radius: 8px;
     scroll-behavior: smooth;
     justify-content: center;
+    padding: 30px 0;
   }
   .content {
     grid-template-columns: repeat(2, 1fr);
@@ -815,7 +823,7 @@ footer {
     margin-bottom: 20px;
   }
   .contact {
-    margin-top: -400px;
+    margin-top: -300px;
   }
   .cover2 .card {
     margin-bottom: 200px;
@@ -848,6 +856,7 @@ footer {
 @media screen and (max-width: 600px) {
   .cover .cover2 {
     grid-auto-columns: calc((115% / 1));
+    padding: 30px 0;
   }
   .content {
     grid-template-columns: 1fr;
