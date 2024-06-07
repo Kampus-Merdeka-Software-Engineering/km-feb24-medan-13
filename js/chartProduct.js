@@ -1,4 +1,4 @@
-let originalProducts = []; // Variabel untuk menyimpan produk asli sebelum pencarian
+let originalProducts = [];
 
 async function fetchData() {
   try {

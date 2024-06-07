@@ -105,7 +105,7 @@ nav .logo {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* navbar section start */
+/* navbar section end */
 
 /* hero section start */
 .container {
@@ -171,11 +171,7 @@ nav .logo {
 
 /* hero section end */
 
-.table-container {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
+/* kpi */
 .flex_response {
   display: flex;
   flex-wrap: wrap;
@@ -237,7 +233,9 @@ hr {
   text-align: center;
   margin-bottom: 15px;
 }
+/* kpi end */
 
+/* chart start */
 .controls {
   display: flex;
   align-items: center;
@@ -276,9 +274,93 @@ button {
   font-size: 32px;
   text-align: center;
 }
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 0 10px;
+  padding: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+h3 {
+  margin-top: 0;
+}
+
+canvas {
+  width: 90% !important;
+  max-height: 350px !important;
+}
+
+#searchContainer {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.scrollable-table {
+  overflow-x: auto;
+  max-height: 300px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #f8f8f8;
+}
+.table-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 /* chart section end */
 
 /* team section start */
+
 .our-team {
   padding: 50px 0;
   text-align: center;
@@ -322,6 +404,108 @@ button {
 .team-member:hover {
   transform: scale(1.05);
 }
+
+.cover {
+  padding: 10rem 7% 1.4rem;
+  margin-top: 20px;
+  margin-bottom: -100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 800px;
+  overflow: hidden;
+}
+
+.team-heading {
+  text-align: center;
+  width: 100%;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.cover2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.cover .cover2 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.cover2::-webkit-scrollbar {
+  display: none;
+}
+
+.cover2.no-transition {
+  scroll-behavior: auto;
+}
+
+.cover2.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.cover2.dragging .card {
+  cursor: grab;
+}
+
+.cover2 :where(.card, .foto) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover2 .card {
+  scroll-snap-align: start;
+  height: 330px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.cover2 .card .foto {
+  background: #004895;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+
+.cover .foto img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.cover2 .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  text-align: center;
+}
+
+.cover2 .card span {
+  color: #6a6d78;
+  font-size: 1.31rem;
+}
+
 /* team section end */
 
 /* contact section start */
@@ -447,188 +631,6 @@ footer {
   font-size: 20px;
 }
 /* footer section end */
-
-.cover {
-  padding: 10rem 7% 1.4rem;
-  margin-top: 20px;
-  margin-bottom: -100px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 800px;
-  overflow: hidden;
-}
-
-.team-heading {
-  text-align: center;
-  width: 100%;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.cover2 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-}
-
-.cover .cover2 {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 4));
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 16px;
-  border-radius: 8px;
-  scroll-behavior: smooth;
-  margin: 0 auto;
-  padding: 30px 0;
-}
-
-.cover2::-webkit-scrollbar {
-  display: none;
-}
-
-.cover2.no-transition {
-  scroll-behavior: auto;
-}
-
-.cover2.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-
-.cover2.dragging .card {
-  cursor: grab;
-}
-
-.cover2 :where(.card, .foto) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cover2 .card {
-  scroll-snap-align: start;
-  height: 330px;
-  list-style: none;
-  background: #fff;
-  cursor: pointer;
-  padding-bottom: 15px;
-  flex-direction: column;
-  border-radius: 8px;
-}
-
-.cover2 .card .foto {
-  background: #004895;
-  height: 148px;
-  width: 148px;
-  border-radius: 50%;
-}
-
-.cover .foto img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #fff;
-}
-
-.cover2 .card h2 {
-  font-weight: 500;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
-  text-align: center;
-}
-
-.cover2 .card span {
-  color: #6a6d78;
-  font-size: 1.31rem;
-}
-
-/* General styles */
-.content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 0 10px;
-  padding: 16px;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.4s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-h3 {
-  margin-top: 0;
-}
-
-canvas {
-  width: 90% !important;
-  max-height: 350px !important;
-}
-
-#searchContainer {
-  display: flex;
-  margin-bottom: 8px;
-}
-
-#searchInput {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-button {
-  padding: 8px 16px;
-  border: none;
-  background: #007bff;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 8px;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-.scrollable-table {
-  overflow-x: auto;
-  max-height: 300px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background: #f8f8f8;
-}
 
 /* Responsive layout */
 @media screen and (max-width: 1000px) {

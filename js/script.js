@@ -1,3 +1,4 @@
+//kpi
 var kpiData = {
   periods: [
     {
@@ -167,4 +168,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//contact end

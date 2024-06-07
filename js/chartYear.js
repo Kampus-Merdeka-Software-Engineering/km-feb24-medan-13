@@ -59,7 +59,6 @@ const renderChartYear = (year_filter = null) => {
 
 renderChartYear();
 
-// Event listener for filter change
 filterYearly.addEventListener("input", function () {
   let year = filterYearly.value;
   if (year === "All") {

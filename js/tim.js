@@ -10,53 +10,59 @@ let isDragging = false,
   startScrollLeft,
   timeoutId;
 
-let cardPerView = Math.round(cover2.offsetWidth / firstCardWidth);
+// Menghitung jumlah item di cover2
+const totalItems = cover2Childrens.length;
 
-cover2Childrens
-  .slice(-cardPerView)
-  .reverse()
-  .forEach((card) => {
-    cover2.insertAdjacentHTML("afterbegin", card.outerHTML);
-  });
+// Jumlah item yang ingin ditampilkan sekaligus
+const cardPerView = Math.min(12, totalItems);
+
+// Mengatur ulang konten untuk memastikan looping bekerja dengan benar
+cover2Childrens.slice(-cardPerView).reverse().forEach((card) => {
+  cover2.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
 
 cover2Childrens.slice(0, cardPerView).forEach((card) => {
   cover2.insertAdjacentHTML("beforeend", card.outerHTML);
 });
 
-cover2.classList.add("no-transition");
-cover2.scrollLeft = cover2.offsetWidth;
-cover2.classList.remove("no-transition");
-
+// Menambahkan event listener untuk tombol panah
 arrowBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     cover2.scrollLeft += btn.id == "kiri" ? -firstCardWidth : firstCardWidth;
   });
 });
 
+// Fungsi untuk memulai drag
 const dragStart = (e) => {
   isDragging = true;
-  cover2.classList.add("dragging");
-  startX = e.pageX;
+  startX = e.pageX - cover2.offsetLeft;
   startScrollLeft = cover2.scrollLeft;
+  cover2.style.cursor = "grabbing"; // Ubah kursor saat drag dimulai
 };
 
+// Fungsi untuk melakukan drag
 const dragging = (e) => {
   if (!isDragging) return;
-  cover2.scrollLeft = startScrollLeft - (e.pageX - startX);
+  e.preventDefault();
+  const x = e.pageX - cover2.offsetLeft;
+  const walk = (x - startX) * 3; // Faktor scroll
+  cover2.scrollLeft = startScrollLeft - walk;
 };
 
+// Fungsi untuk menghentikan drag
 const dragStop = () => {
   isDragging = false;
-  cover2.classList.remove("dragging");
+  cover2.style.cursor = "grab"; // Ubah kursor kembali ke semula
 };
 
+// Fungsi untuk mengatur scrolling tak terbatas
 const infiniteScroll = () => {
   if (cover2.scrollLeft === 0) {
     cover2.classList.add("no-transition");
     cover2.scrollLeft = cover2.scrollWidth - 2 * cover2.offsetWidth;
     cover2.classList.remove("no-transition");
   } else if (
-    Math.ceil(cover2.scrollLeft) ===
+    Math.ceil(cover2.scrollLeft) >=
     cover2.scrollWidth - cover2.offsetWidth
   ) {
     cover2.classList.add("no-transition");
@@ -67,12 +73,14 @@ const infiniteScroll = () => {
   if (!cover.matches(":hover")) autoPlay();
 };
 
+// Fungsi untuk otomatisasi scrolling
 const autoPlay = () => {
   if (window.innerWidth < 800 || !isAutoPlay) return;
   timeoutId = setTimeout(() => (cover2.scrollLeft += firstCardWidth), 2500);
 };
 autoPlay();
 
+// Menambahkan event listener untuk mouse events
 cover2.addEventListener("mousedown", dragStart);
 cover2.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
