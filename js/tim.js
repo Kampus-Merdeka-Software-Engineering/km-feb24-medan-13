@@ -35,7 +35,7 @@ arrowBtns.forEach((btn) => {
 // Fungsi untuk memulai drag
 const dragStart = (e) => {
   isDragging = true;
-  startX = e.pageX - cover2.offsetLeft;
+  startX = (e.pageX || e.touches[0].pageX) - cover2.offsetLeft;
   startScrollLeft = cover2.scrollLeft;
   cover2.style.cursor = "grabbing"; // Ubah kursor saat drag dimulai
 };
@@ -44,7 +44,7 @@ const dragStart = (e) => {
 const dragging = (e) => {
   if (!isDragging) return;
   e.preventDefault();
-  const x = e.pageX - cover2.offsetLeft;
+  const x = (e.pageX || e.touches[0].pageX) - cover2.offsetLeft;
   const walk = (x - startX) * 3; // Faktor scroll
   cover2.scrollLeft = startScrollLeft - walk;
 };
@@ -87,3 +87,8 @@ document.addEventListener("mouseup", dragStop);
 cover2.addEventListener("scroll", infiniteScroll);
 cover.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 cover.addEventListener("mouseleave", autoPlay);
+
+// Menambahkan event listener untuk touch events
+cover2.addEventListener("touchstart", dragStart);
+cover2.addEventListener("touchmove", dragging);
+cover2.addEventListener("touchend", dragStop);
